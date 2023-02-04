@@ -20,6 +20,7 @@ font-family: 'Roboto Condensed', sans-serif;
   --primary-color: #4792a5;
   --light-color: #efefef;
   --dark-color: #3c3c3c;
+  --general-transition: all 0.4s ease;
 }
 
 html {
@@ -58,7 +59,7 @@ button {
 
 a {
   text-decoration: none;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
 }
 
 img {
@@ -150,3 +151,91 @@ ul {
 }
 
 /* Navigaton Menu */
+
+.nav {
+  background-color: rgba(71, 146, 165, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+}
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  padding: 0 2rem;
+}
+
+.nav-item:last-child {
+  padding-right: 0;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: var(--light-color);
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: var(--dark-color);
+  transition: var(--general-transition);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: 0.2rem;
+  width: 0;
+  opacity: 0;
+  background-color: var(--dark-color);
+  transition: var(--general-transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 4rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--light-color);
+  text-align: center;
+  line-height: 7rem;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transition: var(--general-transition);
+}
+
+.logo:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.navbar-toggler {
+  font-size: 2.2rem;
+  position: absolute;
+  right: 2.5rem;
+  z-index: 100;
+  display: none;
+}
+
+.navbar-toggler .line {
+  width: 2.5rem;
+  height: 0.4rem;
+  background-color: var(--dark-color);
+  margin: 0.5rem;
+  transition: var(--general-transition);
+}
