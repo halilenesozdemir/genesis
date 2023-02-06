@@ -33,3 +33,17 @@ ScrollReveal().reveal('.ani-delay-500', {
 ScrollReveal().reveal('.ani-delay-1000', {
   delay: 1000
 });
+
+/* RESPONSIVE NAV MENU */
+
+const navMenu = () => {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navList = document.querySelector('.nav-list');
+
+  navbarToggler.addEventListener('click', () => {
+    navList.classList.toggle('nav-active');
+    navbarToggler.classList.toggle('toggle');
+  });
+};
+
+navMenu();
