@@ -199,10 +199,26 @@ ul {
   height: 2rem;
   border-bottom: 1px solid var(--primary-color);
   border-right: 1px solid var(--primary-color);
+  width: 2rem;
+  height: 2rem;
   transform: rotate(45deg);
   margin: -1rem;
   animation: arrows-animate 2s infinite;
 }
+
+/* .arrows span::after {
+  display: inline;
+  content: '\a';
+  white-space: pre;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+  transform: rotate(45deg);
+  margin: -1rem;
+  animation: arrows-animate 2s infinite;
+} */
 
 .arrows span:nth-child(2) {
   animation-delay: -0.3s;
