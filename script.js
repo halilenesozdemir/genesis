@@ -47,3 +47,24 @@ const navMenu = () => {
 };
 
 navMenu();
+
+/* SERVICES SLIDER */
+
+const serviceChange = () => {
+  let firstChild, lastChild;
+  const arrowLeft = document.querySelector('#arrow-left');
+  const arrowRight = document.querySelector('#arrow-right');
+  const servicesAll = document.querySelector('#services-slider');
+
+  document.addEventListener('click', () => {
+    if (event.target === arrowLeft) {
+      lastChild = servicesAll.lastElementChild;
+      servicesAll.insertAdjacentElement('afterbegin', lastChild);
+    } else if (event.target === arrowRight) {
+      firstChild = servicesAll.firstElementChild;
+      servicesAll.insertAdjacentElement('beforeend', firstChild);
+    }
+  });
+};
+
+serviceChange();

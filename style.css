@@ -354,6 +354,15 @@ ul {
   align-items: flex-end;
 }
 
+#services-slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.services-slide {
+  min-width: 100%;
+}
+
 .btn-arrows {
   display: flex;
   padding-top: 2rem;
